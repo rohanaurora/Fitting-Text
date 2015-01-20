@@ -7,6 +7,7 @@
 //
 
 #import "SampleViewController.h"
+#import "NSString+TruncateWidth.h"
 
 @interface SampleViewController ()
 
@@ -27,10 +28,13 @@
     // Input length ranges from 9 to 18 characters.
     NSString *secondString = @"123456789-Second";
     
-    if (firstString.length > 15) {
-        firstString = [[firstString substringToIndex:15] stringByAppendingString:@"..."];
-    }
+    CGSize sizeOfSecondString = [secondString sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0f]}];
+    CGSize sizeOfButton = self.mainButton.frame.size;
     
+    // Calculate the remaining width to accomodate first string
+    CGFloat sizeOfFirstString = sizeOfButton.width - sizeOfSecondString.width;
+    
+    firstString = [firstString stringByTruncatingToWidth:sizeOfFirstString withFont:[UIFont systemFontOfSize:17.0f]];
     NSString *buttonTitleString = [NSString stringWithFormat:@"%@ %@", firstString, secondString];
     self.mainButton.titleLabel.adjustsFontSizeToFitWidth = NO;
     

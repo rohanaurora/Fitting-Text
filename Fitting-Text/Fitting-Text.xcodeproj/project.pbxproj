@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD2F82901A6C9C0E001D852D /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2F828E1A6C9C0E001D852D /* SampleViewController.m */; };
 		BD2F82911A6C9C0E001D852D /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2F828F1A6C9C0E001D852D /* SampleViewController.xib */; };
+		BD5463621A6E270800AF1DEF /* NSString+TruncateWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5463611A6E270800AF1DEF /* NSString+TruncateWidth.m */; };
 		BDA5482A1A6B71AA004FE867 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA548291A6B71AA004FE867 /* main.m */; };
 		BDA5482D1A6B71AA004FE867 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA5482C1A6B71AA004FE867 /* AppDelegate.m */; };
 		BDA548331A6B71AA004FE867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA548311A6B71AA004FE867 /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 		BD2F828D1A6C9C0E001D852D /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
 		BD2F828E1A6C9C0E001D852D /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
 		BD2F828F1A6C9C0E001D852D /* SampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleViewController.xib; sourceTree = "<group>"; };
+		BD5463601A6E270800AF1DEF /* NSString+TruncateWidth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TruncateWidth.h"; sourceTree = "<group>"; };
+		BD5463611A6E270800AF1DEF /* NSString+TruncateWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TruncateWidth.m"; sourceTree = "<group>"; };
 		BDA548241A6B71AA004FE867 /* Fitting-Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fitting-Text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA548281A6B71AA004FE867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDA548291A6B71AA004FE867 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 			children = (
 				BD2F828D1A6C9C0E001D852D /* SampleViewController.h */,
 				BD2F828E1A6C9C0E001D852D /* SampleViewController.m */,
+				BD5463601A6E270800AF1DEF /* NSString+TruncateWidth.h */,
+				BD5463611A6E270800AF1DEF /* NSString+TruncateWidth.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5463621A6E270800AF1DEF /* NSString+TruncateWidth.m in Sources */,
 				BDA5482D1A6B71AA004FE867 /* AppDelegate.m in Sources */,
 				BD2F82901A6C9C0E001D852D /* SampleViewController.m in Sources */,
 				BDA5482A1A6B71AA004FE867 /* main.m in Sources */,
