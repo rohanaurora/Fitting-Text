@@ -21,20 +21,24 @@
     [super viewDidLoad];
 
     // Min length to be displayed is flexible based on space occupied by second string
-    // Input length ranges from 9 to 20+ characters.
     NSString *firstString = @"FirstPartOfTheStringIsDynamic";
     
     // Min length to be displayed 9 characters.
-    // Input length ranges from 9 to 18 characters.
     NSString *secondString = @"123456789-Second";
     
-    CGSize sizeOfSecondString = [secondString sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0f]}];
+    // Size
+    CGSize sizeOfSecondString = [secondString sizeWithAttributes:@{NSFontAttributeName:self.mainButton.titleLabel.font}];
     CGSize sizeOfButton = self.mainButton.frame.size;
     
-    // Calculate the remaining width to accomodate first string
-    CGFloat sizeOfFirstString = sizeOfButton.width - sizeOfSecondString.width;
+    // Padding
+    UIEdgeInsets buttonInsets = self.mainButton.contentEdgeInsets;
+    CGFloat padding = buttonInsets.right + buttonInsets.left;
     
-    firstString = [firstString stringByTruncatingToWidth:sizeOfFirstString withFont:[UIFont systemFontOfSize:17.0f]];
+    // Calculate the remaining width to accomodate first string
+    CGFloat sizeOfFirstString = sizeOfButton.width - sizeOfSecondString.width - padding;
+    
+    firstString = [firstString stringByTruncatingToWidth:21.1f withFont:self.mainButton.titleLabel.font];
+    
     NSString *buttonTitleString = [NSString stringWithFormat:@"%@ %@", firstString, secondString];
     self.mainButton.titleLabel.adjustsFontSizeToFitWidth = NO;
     

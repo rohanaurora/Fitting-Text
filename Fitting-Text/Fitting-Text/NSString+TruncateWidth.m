@@ -18,16 +18,18 @@ NSString *const kEllipsis = @"…";
     NSMutableString *truncatedString = [self mutableCopy];
     
     // Make sure string is longer than requested width
-    if ([self sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17.0f]}].width > width)
+    if ([self sizeWithAttributes:@{NSFontAttributeName:font}].width > width)
     {
         // Accommodate for ellipsis we'll tack on the end
-        width -= [kEllipsis sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17.0f]}].width;
+        width -= [kEllipsis sizeWithAttributes:@{NSFontAttributeName:font}].width;
         
         // Get range for last character in string
         NSRange range = NSMakeRange(truncatedString.length-1, 1);
         
         // Loop, deleting characters until string fits within width
-        while ([truncatedString sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17.0f]}].width > width)
+        NSAssert((width > [kEllipsis sizeWithAttributes:@{NSFontAttributeName:font}].width),@"Check the width being passed.");
+
+        while ([truncatedString sizeWithAttributes:@{NSFontAttributeName:font}].width > width)
         {
             // Delete character at end
             [truncatedString deleteCharactersInRange:range];
