@@ -37,7 +37,7 @@
     // Calculate the remaining width to accomodate first string
     CGFloat sizeOfFirstString = sizeOfButton.width - sizeOfSecondString.width - padding;
     
-    firstString = [firstString stringByTruncatingToWidth:21.1f withFont:self.mainButton.titleLabel.font];
+    firstString = [firstString stringByTruncatingToWidth:sizeOfFirstString withFont:self.mainButton.titleLabel.font];
     
     NSString *buttonTitleString = [NSString stringWithFormat:@"%@ %@", firstString, secondString];
     self.mainButton.titleLabel.adjustsFontSizeToFitWidth = NO;
