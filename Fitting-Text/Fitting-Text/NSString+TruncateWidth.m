@@ -25,22 +25,23 @@ NSString *const kEllipsis = @"…";
         
         // Get range for last character in string
         NSRange range = NSMakeRange(truncatedString.length-1, 1);
-        
-        // Loop, deleting characters until string fits within width
-        NSAssert((width > [kEllipsis sizeWithAttributes:@{NSFontAttributeName:font}].width),@"Check the width being passed.");
-
-        while ([truncatedString sizeWithAttributes:@{NSFontAttributeName:font}].width > width)
-        {
-            // Delete character at end
-            [truncatedString deleteCharactersInRange:range];
+        if (width > [kEllipsis sizeWithAttributes:@{NSFontAttributeName:font}].width) {
             
-            // Move back another character
-            range.location--;
+            // Loop, deleting characters until string fits within width
+            while (([truncatedString sizeWithAttributes:@{NSFontAttributeName:font}].width) > width)
+            {
+                // Delete character at end
+                [truncatedString deleteCharactersInRange:range];
+                
+                // Move back another character
+                range.location--;
+            }
+            
+            // Append ellipsis
+            [truncatedString replaceCharactersInRange:range withString:kEllipsis];
         }
         
-        // Append ellipsis
-        [truncatedString replaceCharactersInRange:range withString:kEllipsis];
-    }
+        }
     
     return truncatedString;
 }
