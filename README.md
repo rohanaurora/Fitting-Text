@@ -37,5 +37,16 @@ In the screenshot below, I'd like to truncate first string and make room for sec
 
 ![][1]
 
+I solved the above puzzle by calculating the remaining size where the first string can be accommodated. Used a `NSString` category to truncate with ellipsis. 
+
+`Size of First String = Size of Button - Size of Second String`
+
+Here's the updated demo - https://github.com/rohanaurora/Fitting-Text
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/Joq8r.png
+
 
   [1]: http://i.stack.imgur.com/DSkM2.png
