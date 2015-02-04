@@ -22,7 +22,5 @@ Output -
 
   [1]: http://i.stack.imgur.com/Joq8r.png
 
-
-  [1]: http://i.stack.imgur.com/DSkM2.png
   
- [2]: http://i.imgur.com/56v7cRg.png
+![Screenshot](http://i.imgur.com/56v7cRg.png)
