@@ -15,7 +15,7 @@ I solved the above puzzle by calculating the remaining size where the first stri
 
 `Size of First String = Size of Button - Size of Second String`
 
-
+Output - 
 
 ![enter image description here][1]
 
@@ -24,3 +24,5 @@ I solved the above puzzle by calculating the remaining size where the first stri
 
 
   [1]: http://i.stack.imgur.com/DSkM2.png
+  
+ [2]: http://i.imgur.com/56v7cRg.png
