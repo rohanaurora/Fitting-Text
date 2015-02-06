@@ -5,8 +5,7 @@ There are 2 strings separated by a space forming a `UIButton` title. The button 
 
 **Requirements -**
 
-Second string has a minimum length of 9 characters which will be shown at all times. 
-If first string has a length greater than 15 characters, it can be truncated from the right side, ending it with ellipsis (...) 
+Second string has a minimum length of 9 characters which will be shown at all times. If first string has a length greater than 15 characters, it can be truncated from the right side, ending it with ellipsis (...) 
 
 
 **Solution -**
